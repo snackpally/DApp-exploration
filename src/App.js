@@ -30,9 +30,7 @@ class App extends Component {
     return (
       <div>
         <h2>Lottery Contract</h2>
-        <p>
-          This contract is managed by {this.state.manager || "Not returning"}
-        </p>
+        <p>This contract is managed by {this.state.manager}</p>
       </div>
     );
   }
