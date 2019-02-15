@@ -21,7 +21,7 @@ class App extends Component {
     const total = await lottery.methods.lotteryTotal().call();
     console.log("total", total);
 
-    const manager = await lottery.methods.manager().call();
+    const manager = await lottery.methods.manager().call({ from: account[0] });
     console.log(manager);
   }
   render() {
