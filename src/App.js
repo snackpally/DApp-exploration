@@ -3,13 +3,7 @@ import web3 from "./web3";
 import lottery from "./lottery";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      manager: ""
-    };
-  }
+  state = { manager: "", players: [] };
 
   async componentDidMount() {
     const account = await web3.eth.getAccounts();
@@ -18,14 +12,15 @@ class App extends Component {
     const here = await lottery.options;
     console.log("contract address", here);
 
-    const total = await lottery.methods.lotteryTotal().call();
-    console.log("total", total);
+    const manager = await lottery.methods.manager().call();
+    const players = await lottery.methods.getPlayers().call();
+    console.log("manager", manager);
+    console.log("players", players);
 
-    const manager = await lottery.methods.manager().call({ from: account[0] });
-    console.log(manager);
+    this.setState({ manager: manager, players: players });
+    console.log(web3.version);
   }
   render() {
-    console.log(web3.version);
     console.log(this.state);
     return (
       <div>

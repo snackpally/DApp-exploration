@@ -3,14 +3,14 @@
 
 import web3 from "./web3";
 
-const address = "0x066cFb5E67753224c9247157f62E6bE47bC952ad";
+const address = "0xa07BF245523Ce311DfC058F3FE8366E6CBa65Bd6";
 
 const abi = [
   {
     constant: true,
     inputs: [],
     name: "manager",
-    outputs: [[Object]],
+    outputs: [{ name: "", type: "address" }],
     payable: false,
     stateMutability: "view",
     type: "function",
@@ -30,7 +30,7 @@ const abi = [
     constant: true,
     inputs: [],
     name: "getPlayers",
-    outputs: [[Object]],
+    outputs: [{ name: "", type: "address[]" }],
     payable: false,
     stateMutability: "view",
     type: "function",
