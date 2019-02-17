@@ -10,11 +10,15 @@ const abi = [
     constant: true,
     inputs: [],
     name: "manager",
-    outputs: [{ name: "", type: "address" }],
+    outputs: [
+      {
+        name: "",
+        type: "address"
+      }
+    ],
     payable: false,
     stateMutability: "view",
-    type: "function",
-    signature: "0x481c6a75"
+    type: "function"
   },
   {
     constant: false,
@@ -23,18 +27,21 @@ const abi = [
     outputs: [],
     payable: false,
     stateMutability: "nonpayable",
-    type: "function",
-    signature: "0x5d495aea"
+    type: "function"
   },
   {
     constant: true,
     inputs: [],
     name: "getPlayers",
-    outputs: [{ name: "", type: "address[]" }],
+    outputs: [
+      {
+        name: "",
+        type: "address[]"
+      }
+    ],
     payable: false,
     stateMutability: "view",
-    type: "function",
-    signature: "0x8b5b9ccc"
+    type: "function"
   },
   {
     constant: false,
@@ -43,36 +50,46 @@ const abi = [
     outputs: [],
     payable: true,
     stateMutability: "payable",
-    type: "function",
-    signature: "0xe97dcb62"
+    type: "function"
   },
   {
     constant: true,
-    inputs: [[Object]],
+    inputs: [
+      {
+        name: "",
+        type: "uint256"
+      }
+    ],
     name: "players",
-    outputs: [[Object]],
+    outputs: [
+      {
+        name: "",
+        type: "address"
+      }
+    ],
     payable: false,
     stateMutability: "view",
-    type: "function",
-    signature: "0xf71d96cb"
+    type: "function"
   },
   {
     constant: true,
     inputs: [],
     name: "lotteryTotal",
-    outputs: [[Object]],
+    outputs: [
+      {
+        name: "",
+        type: "uint256"
+      }
+    ],
     payable: false,
     stateMutability: "view",
-    type: "function",
-    signature: "0xf94a28ff"
+    type: "function"
   },
   {
     inputs: [],
     payable: false,
     stateMutability: "nonpayable",
-    type: "constructor",
-    constant: undefined,
-    signature: "constructor"
+    type: "constructor"
   }
 ];
 
